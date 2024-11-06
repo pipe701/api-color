@@ -6,6 +6,10 @@ import numpy as np
 import joblib
 import os
 
+# Desactivar el uso de GPU (esto debe ir antes de importar TensorFlow)
+import tensorflow as tf
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Desactiva el uso de la GPU
+
 app = Flask(__name__)
 
 # Configurar CORS
@@ -59,3 +63,4 @@ def predict_color():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000), debug=True)
+
