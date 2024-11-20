@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: color-predictor-api        # Nombre de tu servicio
+    env: python                      # Especificamos que es una aplicación de Python
+    buildCommand: "pip install -r requirements.txt"  # Comando para instalar las dependencias
+    startCommand: "gunicorn api_color:app"         # Comando para iniciar la app con gunicorn
+    ports:
+      - 5000                                      # Puerto en el que la aplicación escuchará
