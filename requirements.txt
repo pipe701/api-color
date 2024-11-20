@@ -1,9 +1,9 @@
-Flask==2.2.3
+Flask
 flask-cors
-tensorflow==2.18.0  # O la versión que sea compatible con tu modelo
-pillow==9.2.0
-joblib==1.2.0
-numpy  # O la versión que sea compatible
+tensorflow
+pillow
+joblib
+numpy 
 gunicorn
 
 
