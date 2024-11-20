@@ -12,7 +12,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Desactiva el uso de la GPU
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/predict": {"origins": "*"}})  # Permite solicitudes CORS a /predict desde cualquier origen
+CORS(app)
 
 
 # Cargar el modelo y el label encoder
